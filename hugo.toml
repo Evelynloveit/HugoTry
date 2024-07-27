@@ -1,0 +1,79 @@
+baseURL = 'https://evelynloveit.github.io/'
+languageCode = 'zh-CN'
+timeZone = 'Asia/Shanghai'
+title = '万物有林'
+
+# 主题
+theme  =  "hello-friend"
+summaryLength = 140
+hasCJKLanguage = true
+# 每页显示的文章数量用于分页
+paginate =  10
+# rss 输出数量
+rssLimit = 5
+
+ignoreLogs = ['error-remote-getjson']
+
+[permalinks]
+  posts = "/posts/:filename/"
+  tags = "/tags/:slug/"
+
+[menu]
+  [[menu.main]]
+  name="📖 Reading"
+  url="/posts/reading/"
+  weight="1"
+ [[menu.main]]
+  name="📜 Writing"
+  url="/posts/reading/"
+  weight="2" 
+  [[menu.main]]
+  name="📍 Traveling"
+  url="/posts/reading/"
+  weight="3"
+  [[menu.main]]
+  name="🌌 Wandering"
+  url="/posts/reading/"
+  weight="1"
+
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # "light" or "dark"
+  defaultTheme = "light"
+  # if you set this to 0, only submenu trigger will be visible
+  # showMenuItems = 4
+  # Enable to show reading time in minutes for posts
+  showReadingTime = true
+  logoText = "hello friend"
+
+  MenuMore = "更多"
+  DateFormatList = "2006-01-02"
+  DateFormatSingle = "2006-01-02"
+  ReadMore = "阅读全文"
+  
+  description = "生命就是反重力的过程"
+	keywords = "博客、app、折腾、生活、阅读、自律"
+ 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
+    
+[outputs]
+  home = ["Atom", "HTML","JSON"] # <domain>/atom.xml
+  page = ["HTML"]
+  
+[outputFormats.Atom]
+  mediatype = "application/rss"
+  baseName = "atom"
+
+[params.twikoo]
+	enable = false
+  visitor = true
+  
