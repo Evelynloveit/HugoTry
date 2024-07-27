@@ -75,5 +75,5 @@ ignoreLogs = ['error-remote-getjson']
 
 [params.twikoo]
 	enable = false
-  visitor = true
+  visitor = false
   
